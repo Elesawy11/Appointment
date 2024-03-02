@@ -7,4 +7,19 @@ abstract class Styles {
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.semiBold,
   );
+
+  static TextStyle font32Bold = TextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle font12Regular = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+  );
+
+  static TextStyle font16Semibold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.semiBold,
+  );
 }
