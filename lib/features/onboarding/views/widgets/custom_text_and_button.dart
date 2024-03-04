@@ -1,5 +1,8 @@
+import 'package:doc_doc_app/core/utils/routes.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/utils/color.dart';
 import '../../../../core/utils/styles.dart';
@@ -11,21 +14,21 @@ class CustomTextAndTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
+      padding: EdgeInsets.symmetric(horizontal: 32.w),
       child: Column(
         children: [
           Text(
             'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
             style: Styles.font12Regular.copyWith(
-              color: ColorManger.grey,
+              color: ColorManager.grey,
             ),
             textAlign: TextAlign.center,
           ),
-          sizedBoxSpace(height: 32),
+          verticalSpace(32),
           StartedTextButton(
-            onPressed: () {},
+            onPressed: () => GoRouter.of(context).push(Routes.loginView),
           ),
-          sizedBoxSpace(height: 32),
+          verticalSpace(32),
         ],
       ),
     );

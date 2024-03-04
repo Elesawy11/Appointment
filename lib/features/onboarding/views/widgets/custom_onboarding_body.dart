@@ -37,7 +37,7 @@ class CustomOnboardingBody extends StatelessWidget {
             'Best Doctor\n Appointment App',
             textAlign: TextAlign.center,
             style: Styles.font32Bold.copyWith(
-              color: ColorManger.mainBlue,
+              color: ColorManager.mainBlue,
             ),
           ),
         ),

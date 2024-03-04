@@ -15,9 +15,9 @@ class OnboardingViewBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              sizedBoxSpace(height: 24),
+              verticalSpace(24),
               const CustomOnboardingTitle(),
-              sizedBoxSpace(height: 40),
+              verticalSpace(40),
               const CustomOnboardingBody(),
               const CustomTextAndTextButton(),
             ],

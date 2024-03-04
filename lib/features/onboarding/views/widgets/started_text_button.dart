@@ -5,15 +5,16 @@ import '../../../../core/utils/styles.dart';
 
 class StartedTextButton extends StatelessWidget {
   const StartedTextButton({
-    super.key, this.onPressed,
+    super.key,
+    this.onPressed,
   });
-final void Function()? onPressed;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
-        backgroundColor: ColorManger.mainBlue,
+        backgroundColor: ColorManager.mainBlue,
         minimumSize: const Size(double.infinity, 52),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),

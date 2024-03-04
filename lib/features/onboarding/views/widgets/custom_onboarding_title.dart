@@ -18,7 +18,7 @@ class CustomOnboardingTitle extends StatelessWidget {
           width: 38.w,
           height: 38.h,
         ),
-        sizedBoxSpace(width: 8),
+        horizontalSpace(8),
         Text(
           'Docdoc',
           style: Styles.font30Semibold,
