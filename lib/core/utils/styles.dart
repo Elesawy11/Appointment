@@ -7,6 +7,10 @@ abstract class Styles {
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.regular,
   );
+  static TextStyle font13Regular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelper.regular,
+  );
   static TextStyle font14Regular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,

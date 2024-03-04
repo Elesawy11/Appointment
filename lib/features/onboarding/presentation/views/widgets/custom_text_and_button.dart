@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../core/utils/color.dart';
-import '../../../../core/utils/styles.dart';
-import 'started_text_button.dart';
+import '../../../../../core/utils/color.dart';
+import '../../../../../core/utils/styles.dart';
+import '../../../../../core/widgets/app_text_button.dart';
 
 class CustomTextAndTextButton extends StatelessWidget {
   const CustomTextAndTextButton({super.key});
@@ -25,7 +25,8 @@ class CustomTextAndTextButton extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           verticalSpace(32),
-          StartedTextButton(
+          AppTextButton(
+            text: 'Get Started',
             onPressed: () => GoRouter.of(context).push(Routes.loginView),
           ),
           verticalSpace(32),

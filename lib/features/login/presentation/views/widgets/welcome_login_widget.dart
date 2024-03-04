@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/color.dart';
-import '../../../../core/utils/spacer.dart';
-import '../../../../core/utils/styles.dart';
+import '../../../../../core/utils/color.dart';
+import '../../../../../core/utils/spacer.dart';
+import '../../../../../core/utils/styles.dart';
 
 class WelcomeLoginWidget extends StatelessWidget {
   const WelcomeLoginWidget({super.key});

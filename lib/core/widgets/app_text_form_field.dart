@@ -1,8 +1,8 @@
 import 'package:doc_doc_app/core/utils/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'color.dart';
-import 'styles.dart';
+import '../utils/color.dart';
+import '../utils/styles.dart';
 
 class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
