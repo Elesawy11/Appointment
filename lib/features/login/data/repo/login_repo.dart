@@ -14,9 +14,15 @@ class LoginRepo {
     try {
       var response = await _apiService.login(loginRequest);
 
-      return right(response);
+      return right(
+        LoginResopnseBody.fromJson(
+          response,
+        ),
+      );
     } catch (e) {
-      return left(ErrorHandler.handle(e));
+      return left(
+        ErrorHandler.handle(e),
+      );
     }
   }
 }
