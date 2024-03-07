@@ -62,9 +62,9 @@ class LoginViewBody extends StatelessWidget {
               const DividerAndText(),
               verticalSpace(60),
               const TermsAndConditionText(),
-              verticalSpace(24),
+              verticalSpace(18),
               const SignUpTextWidget(),
-              verticalSpace(24),
+              verticalSpace(12),
               LoginBlocListener(bloc: cubit)
             ],
           ),
