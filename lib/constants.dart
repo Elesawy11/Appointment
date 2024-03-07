@@ -3,3 +3,5 @@ const String logoOpacity = 'assets/svg_image/logo_opacity.svg';
 
 const String onboarding = 'assets/image/onboarding.png';
 const String bookImage = 'assets/image/book_image.png';
+const String brain = 'assets/image/Brain.png';
+const String general = 'assets/image/icon.png';
