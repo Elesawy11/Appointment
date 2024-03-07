@@ -6,8 +6,8 @@ import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/font_weight_helper.dart';
 import '../../../../../core/utils/styles.dart';
 
-class SignUpTextWidget extends StatelessWidget {
-  const SignUpTextWidget({
+class AlreadyHaveAnAccount extends StatelessWidget {
+  const AlreadyHaveAnAccount({
     super.key,
   });
 
@@ -17,15 +17,15 @@ class SignUpTextWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Don\'t have an account?',
+          'Already have an account yet?',
           style: Styles.font12Regular.copyWith(
             color: ColorManager.darkBlue,
           ),
         ),
         TextButton(
-            onPressed: () => GoRouter.of(context).push(Routes.signupView),
+            onPressed: () => GoRouter.of(context).push(Routes.loginView),
             child: Text(
-              'Sign Up',
+              'Login',
               style: Styles.font12Regular.copyWith(
                   fontWeight: FontWeightHelper.semiBold,
                   color: ColorManager.mainBlue),
