@@ -34,7 +34,7 @@ class LoginBlocListener extends StatelessWidget {
                   )
                 : {
                     GoRouter.of(context).pop(),
-                    GoRouter.of(context).push(Routes.onboardingView)
+                    context.go(Routes.homeView),
                   };
       },
       child: const SizedBox.shrink(),

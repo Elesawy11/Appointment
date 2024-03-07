@@ -27,7 +27,7 @@ class CustomTextAndTextButton extends StatelessWidget {
           verticalSpace(32),
           AppTextButton(
             text: 'Get Started',
-            onPressed: () => GoRouter.of(context).push(Routes.loginView),
+            onPressed: () => context.go(Routes.loginView),
           ),
           verticalSpace(32),
         ],
