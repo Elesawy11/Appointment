@@ -8,11 +8,9 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 30.h),
-          child: const LoginViewBody(),
-        ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 30.w),
+        child: const LoginViewBody(),
       ),
     );
   }

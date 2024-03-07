@@ -1,3 +1,6 @@
+import 'package:doc_doc_app/core/utils/color.dart';
+import 'package:doc_doc_app/core/utils/font_weight_helper.dart';
+import 'package:doc_doc_app/core/utils/routes.dart';
 import 'package:doc_doc_app/core/utils/styles.dart';
 import 'package:doc_doc_app/features/login/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
@@ -5,8 +8,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class LoginBlocListener extends StatelessWidget {
-  const LoginBlocListener({super.key});
-
+  const LoginBlocListener({super.key, required this.bloc});
+  final LoginCubit bloc;
   @override
   Widget build(BuildContext context) {
     return BlocListener<LoginCubit, LoginState>(
@@ -17,34 +20,7 @@ class LoginBlocListener extends StatelessWidget {
       },
       listener: (context, state) {
         state is LoginFailure
-            ? showDialog(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    icon: const Icon(
-                      Icons.error,
-                      color: Colors.red,
-                    ),
-                    content: Text(
-                      state.errMessage,
-                      style: Styles.font14Regular.copyWith(
-                        color: Colors.red,
-                      ),
-                    ),
-                    actions: [
-                      TextButton(
-                          onPressed: () {
-                            GoRouter.of(context).pop();
-                          },
-                          child: Text(
-                            'Go Out',
-                            style:
-                                Styles.font24Bold.copyWith(color: Colors.red),
-                          ))
-                    ],
-                  );
-                },
-              )
+            ? loginFailureAction(context, state)
             : state is LoginLoading
                 ? showDialog(
                     context: context,
@@ -54,26 +30,45 @@ class LoginBlocListener extends StatelessWidget {
                           color: Colors.blue,
                         ),
                       );
-                    })
-                : AlertDialog(
-                    icon: const Icon(
-                      Icons.error,
-                      color: Colors.red,
-                    ),
-                    actions: [
-                      TextButton(
-                          onPressed: () {
-                            GoRouter.of(context).pop();
-                          },
-                          child: Text(
-                            'Go Out',
-                            style:
-                                Styles.font24Bold.copyWith(color: Colors.red),
-                          ))
-                    ],
-                  );
+                    },
+                  )
+                : {
+                    GoRouter.of(context).pop(),
+                    GoRouter.of(context).push(Routes.onboardingView)
+                  };
       },
       child: const SizedBox.shrink(),
+    );
+  }
+
+  Future<dynamic> loginFailureAction(BuildContext context, LoginFailure state) {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          icon: const Icon(
+            Icons.error,
+            color: Colors.red,
+          ),
+          content: Text(
+            state.errMessage,
+            style: Styles.font14Regular,
+          ),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  GoRouter.of(context).pop();
+                  GoRouter.of(context).pop();
+                },
+                child: Text(
+                  'Got it',
+                  style: Styles.font14Regular.copyWith(
+                      color: ColorManager.mainBlue,
+                      fontWeight: FontWeightHelper.semiBold),
+                ))
+          ],
+        );
+      },
     );
   }
 }

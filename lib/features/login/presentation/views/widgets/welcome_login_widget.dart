@@ -12,7 +12,7 @@ class WelcomeLoginWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        verticalSpace(20),
+        verticalSpace(94),
         Text(
           'Welcome Back',
           style: Styles.font24Bold.copyWith(color: ColorManager.mainBlue),
