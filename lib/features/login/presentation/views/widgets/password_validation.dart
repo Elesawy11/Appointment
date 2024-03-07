@@ -41,7 +41,7 @@ class PasswordValidations extends StatelessWidget {
   Widget buildValidationRow(String text, bool hasValidated) {
     return Row(
       children: [
-         CircleAvatar(
+        CircleAvatar(
           radius: 2.5.r,
           backgroundColor: ColorManager.grey,
         ),
