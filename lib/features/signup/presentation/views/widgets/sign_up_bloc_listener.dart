@@ -11,7 +11,7 @@ import '../../../../../core/utils/styles.dart';
 class SignUpBlocListener extends StatelessWidget {
   const SignUpBlocListener({super.key});
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return BlocListener<SignUpCubit, SignUpState>(
       listenWhen: (previous, current) {
@@ -34,15 +34,16 @@ class SignUpBlocListener extends StatelessWidget {
                     },
                   )
                 : {
-                    GoRouter.of(context).pop(),
-                    GoRouter.of(context).push(Routes.onboardingView)
+                    context.pop(),
+                    context.go(Routes.homeView),
                   };
       },
       child: const SizedBox.shrink(),
     );
   }
 
-  Future<dynamic> loginFailureAction(BuildContext context, SignUpFailure state) {
+  Future<dynamic> loginFailureAction(
+      BuildContext context, SignUpFailure state) {
     return showDialog(
       context: context,
       builder: (context) {
