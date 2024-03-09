@@ -1,5 +1,6 @@
 import 'package:doc_doc_app/core/utils/routes.dart';
 import 'package:doc_doc_app/features/home/presentation/views/home_view.dart';
+import 'package:doc_doc_app/features/home/presentation/views/speciality_view.dart';
 import 'package:doc_doc_app/features/login/presentation/views/login_view.dart';
 import 'package:doc_doc_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:doc_doc_app/features/signup/presentation/views/signup_view.dart';
@@ -23,6 +24,10 @@ abstract class AppRouter {
       GoRoute(
         path: Routes.homeView,
         builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: Routes.specialityView,
+        builder: (context, state) => const SpecialityView(),
       ),
     ],
   );

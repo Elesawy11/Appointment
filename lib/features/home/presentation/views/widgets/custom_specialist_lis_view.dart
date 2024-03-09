@@ -1,3 +1,4 @@
+import 'package:doc_doc_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,9 +12,12 @@ class CustomSpecialistListView extends StatelessWidget {
     return SizedBox(
       height: 86.h,
       child: ListView.builder(
+        itemCount: specialistDoctorList.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return const SpecialistItem();
+          return SpecialistItem(
+            specialistDoctorList: specialistDoctorList[index],
+          );
         },
       ),
     );
