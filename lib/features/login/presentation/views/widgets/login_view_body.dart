@@ -1,4 +1,5 @@
 import 'package:doc_doc_app/core/utils/color.dart';
+import 'package:doc_doc_app/core/utils/routes.dart';
 import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:doc_doc_app/core/utils/styles.dart';
@@ -11,6 +12,7 @@ import 'package:doc_doc_app/features/login/presentation/views/widgets/email_and_
 import 'package:doc_doc_app/features/login/presentation/views/widgets/login_bloc_listener.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'signup_text_widget.dart';
 import 'terms_and_consdition_text.dart';
 import 'welcome_login_widget.dart';
@@ -43,19 +45,20 @@ class LoginViewBody extends StatelessWidget {
               AppTextButton(
                 text: 'Login',
                 onPressed: () {
-                  if (context
-                      .read<LoginCubit>()
-                      .formKey
-                      .currentState!
-                      .validate()) {
-                    BlocProvider.of<LoginCubit>(context).loginMethod(
-                      LoginRequestBody(
-                        email: context.read<LoginCubit>().emailController.text,
-                        password:
-                            context.read<LoginCubit>().passwordController.text,
-                      ),
-                    );
-                  }
+                  context.push(Routes.homeView);
+                  // if (context
+                  //     .read<LoginCubit>()
+                  //     .formKey
+                  //     .currentState!
+                  //     .validate()) {
+                  //   BlocProvider.of<LoginCubit>(context).loginMethod(
+                  //     LoginRequestBody(
+                  //       email: context.read<LoginCubit>().emailController.text,
+                  //       password:
+                  //           context.read<LoginCubit>().passwordController.text,
+                  //     ),
+                  //   );
+                  // }
                 },
               ),
               verticalSpace(46),
