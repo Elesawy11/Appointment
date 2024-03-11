@@ -14,7 +14,7 @@ class DoctorCubit extends Cubit<DoctorState> {
   Future<void> getAllDoctor() async {
     emit(GetDoctorLoading());
     var response = await _homeRepo.getAllDoctor();
-    // print(response);
+    
 
     response.fold(
       (failure) => emit(GetDoctorFailure(failure.apiErrorModel.message!)),

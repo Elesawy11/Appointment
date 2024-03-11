@@ -34,7 +34,9 @@ class HomeViewBody extends StatelessWidget {
               verticalSpace(23),
               CustomTextAndTextButton(
                 text: 'Recommendation Doctor',
-                onPressed: () => context.push(Routes.recommendationView),
+                onPressed: () => context.push(
+                  Routes.recommendationView,
+                ),
               ),
               verticalSpace(12),
             ],
@@ -43,9 +45,6 @@ class HomeViewBody extends StatelessWidget {
         const SliverFillRemaining(
           child: CustomDoctorsListView(),
         ),
-        // SliverToBoxAdapter(
-        //   child: verticalSpace(60),
-        // )
       ],
     );
   }
