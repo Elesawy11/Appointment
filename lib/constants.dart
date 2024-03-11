@@ -9,6 +9,7 @@ const String bookImage = 'assets/image/book_image.png';
 const String brain = 'assets/image/Brain.png';
 const String general = 'assets/image/icon.png';
 const String account = 'assets/image/account.png';
+const String barSort = 'assets/image/sort.png';
 
 const List<List<dynamic>> specialistDoctorList = [
   ['assets/image/cardiology.png', 'Cardiology', 1],
