@@ -1,6 +1,8 @@
+import 'package:doc_doc_app/core/utils/routes.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
 import 'custom_book_and_schedule_widget.dart';
 import 'custom_doctors_list_view.dart';
 import 'custom_specialist_lis_view.dart';
@@ -25,23 +27,24 @@ class HomeViewBody extends StatelessWidget {
               verticalSpace(23),
               CustomTextAndTextButton(
                 text: 'Doctor Speciality',
-                onPressed: () {},
+                onPressed: () => context.push(Routes.specialityView),
               ),
               verticalSpace(16),
               const CustomSpecialistListView(),
               verticalSpace(23),
               CustomTextAndTextButton(
                 text: 'Recommendation Doctor',
-                onPressed: () {},
+                onPressed: () => context.push(
+                  Routes.recommendationView,
+                ),
               ),
               verticalSpace(12),
             ],
           ),
         ),
         const SliverFillRemaining(
-          fillOverscroll: true,
           child: CustomDoctorsListView(),
-        )
+        ),
       ],
     );
   }

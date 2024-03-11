@@ -33,4 +33,16 @@ class ApiService {
     );
     return response.data;
   }
+
+  Future<Map<String, dynamic>> getAllDoctor() async {
+    var headers = {
+      'Accept': 'application/json',
+      'Authorization':
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzEwMTg5ODI5LCJleHAiOjE3MTAxOTM0MjksIm5iZiI6MTcxMDE4OTgyOSwianRpIjoiWXhjRnQxQjc0amo0bGdZeiIsInN1YiI6IjkwMCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Vl8uzzQVNTGW93J7LsRnI3Vdlk_rt1pi1OIVe9K9zlI'
+    };
+    var response = await dio.get(
+        '${ApiConstants.apiBaseUrl}${ApiConstants.getAllDoctor}',
+        options: Options(headers: headers));
+    return response.data;
+  }
 }

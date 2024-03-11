@@ -1,3 +1,4 @@
+import 'package:doc_doc_app/features/home/data/models/doctor_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,13 +7,13 @@ import '../../../../../core/utils/font_weight_helper.dart';
 import '../../../../../core/utils/spacer.dart';
 import '../../../../../core/utils/styles.dart';
 import 'custom_doctor_image.dart';
-import 'custom_doctor_rating.dart';
 
 class CustomDoctorItem extends StatelessWidget {
   const CustomDoctorItem({
-    super.key,
+    super.key, required this.doctorModel,
+    
   });
-
+  final DoctorModel doctorModel;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -33,7 +34,7 @@ class CustomDoctorItem extends StatelessWidget {
                   width: 200.w,
                   height: 24.h,
                   child: Text(
-                    'Dr. Randy Wigham',
+                    'Dr. ${doctorModel.name}',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: Styles.font16Semibold.copyWith(
@@ -44,7 +45,7 @@ class CustomDoctorItem extends StatelessWidget {
                 ),
                 verticalSpace(8),
                 Text(
-                  'General | RSUD Gatot Subroto',
+                  '${doctorModel.specialization!.name} | ${doctorModel.address}',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: Styles.font12Regular.copyWith(
@@ -53,9 +54,29 @@ class CustomDoctorItem extends StatelessWidget {
                   ),
                 ),
                 verticalSpace(12),
-                const CustomDoctorRating(
-                  count: 4279,
-                  rating: 4,
+                Row(
+                  // mainAxisAlignment: mainAxisAlignment,
+                  children: [
+                    Text(
+                      '\$ ${doctorModel.appointPrice}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Styles.font12Regular.copyWith(
+                        fontWeight: FontWeightHelper.medium,
+                        color: ColorManager.grey,
+                      ),
+                    ),
+                    horizontalSpace(6),
+                    Text(
+                      '(${doctorModel.degree})',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Styles.font12Regular.copyWith(
+                        fontWeight: FontWeightHelper.medium,
+                        color: ColorManager.grey,
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
