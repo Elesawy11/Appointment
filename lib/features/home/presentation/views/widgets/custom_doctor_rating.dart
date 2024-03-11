@@ -14,22 +14,16 @@ class CustomDoctorRating extends StatelessWidget {
     required this.count,
     required this.rating,
   });
-  final double count;
-  final double rating;
+  final int count;
+  final int rating;
   final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
       children: [
-        Icon(
-          size: 16.r,
-          FontAwesomeIcons.solidStar,
-          color: const Color(0xffFFDD4F),
-        ),
-        horizontalSpace(6),
         Text(
-          rating.toString(),
+          '\$ $rating',
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: Styles.font12Regular.copyWith(

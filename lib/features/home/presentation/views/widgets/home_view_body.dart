@@ -41,12 +41,11 @@ class HomeViewBody extends StatelessWidget {
           ),
         ),
         const SliverFillRemaining(
-          // fillOverscroll: true,
           child: CustomDoctorsListView(),
         ),
-        SliverToBoxAdapter(
-          child: verticalSpace(120),
-        )
+        // SliverToBoxAdapter(
+        //   child: verticalSpace(60),
+        // )
       ],
     );
   }

@@ -4,20 +4,23 @@ part 'doctor_model.g.dart';
 
 @JsonSerializable()
 class DoctorModel {
-  final int? id;
-  final String? name;
-  final String? email;
-  final String? phone;
-  final String? photo;
-  final String? gender;
-  final String? address;
-  final String? description;
-  final String? degree;
+  final int id;
+  final String name;
+  final String email;
+  final String phone;
+  final String photo;
+  final String gender;
+  final String address;
+  final String description;
+  final String degree;
   final Specialization? specialization;
-  final City? city;
-  final int? appointPrice;
-  final String? startTime;
-  final String? endTime;
+  final City city;
+  @JsonKey(name: 'appoint_price')
+  final int appointPrice;
+  @JsonKey(name: 'start_time')
+  final String startTime;
+  @JsonKey(name: 'end_time')
+  final String endTime;
 
   DoctorModel(
       {required this.id,
@@ -41,8 +44,8 @@ class DoctorModel {
 
 @JsonSerializable()
 class Specialization {
-  final int? id;
-  final String? name;
+  final int id;
+  final String name;
 
   Specialization({required this.id, required this.name});
   factory Specialization.fromJson(Map<String, dynamic> json) =>
@@ -51,8 +54,8 @@ class Specialization {
 
 @JsonSerializable()
 class City {
-  final int? id;
-  final String? name;
+  final int id;
+  final String name;
   final Specialization? governrate;
 
   City({required this.id, required this.name, required this.governrate});

@@ -7,25 +7,23 @@ part of 'doctor_model.dart';
 // **************************************************************************
 
 DoctorModel _$DoctorModelFromJson(Map<String, dynamic> json) => DoctorModel(
-      id: json['id'] as int?,
-      name: json['name'] as String?,
-      email: json['email'] as String?,
-      phone: json['phone'] as String?,
-      photo: json['photo'] as String?,
-      gender: json['gender'] as String?,
-      address: json['address'] as String?,
-      description: json['description'] as String?,
-      degree: json['degree'] as String?,
+      id: json['id'] as int,
+      name: json['name'] as String,
+      email: json['email'] as String,
+      phone: json['phone'] as String,
+      photo: json['photo'] as String,
+      gender: json['gender'] as String,
+      address: json['address'] as String,
+      description: json['description'] as String,
+      degree: json['degree'] as String,
       specialization: json['specialization'] == null
           ? null
           : Specialization.fromJson(
               json['specialization'] as Map<String, dynamic>),
-      city: json['city'] == null
-          ? null
-          : City.fromJson(json['city'] as Map<String, dynamic>),
-      appointPrice: json['appointPrice'] as int?,
-      startTime: json['startTime'] as String?,
-      endTime: json['endTime'] as String?,
+      city: City.fromJson(json['city'] as Map<String, dynamic>),
+      appointPrice: json['appoint_price'] as int,
+      startTime: json['start_time'] as String,
+      endTime: json['end_time'] as String,
     );
 
 Map<String, dynamic> _$DoctorModelToJson(DoctorModel instance) =>
@@ -41,15 +39,15 @@ Map<String, dynamic> _$DoctorModelToJson(DoctorModel instance) =>
       'degree': instance.degree,
       'specialization': instance.specialization,
       'city': instance.city,
-      'appointPrice': instance.appointPrice,
-      'startTime': instance.startTime,
-      'endTime': instance.endTime,
+      'appoint_price': instance.appointPrice,
+      'start_time': instance.startTime,
+      'end_time': instance.endTime,
     };
 
 Specialization _$SpecializationFromJson(Map<String, dynamic> json) =>
     Specialization(
-      id: json['id'] as int?,
-      name: json['name'] as String?,
+      id: json['id'] as int,
+      name: json['name'] as String,
     );
 
 Map<String, dynamic> _$SpecializationToJson(Specialization instance) =>
@@ -59,8 +57,8 @@ Map<String, dynamic> _$SpecializationToJson(Specialization instance) =>
     };
 
 City _$CityFromJson(Map<String, dynamic> json) => City(
-      id: json['id'] as int?,
-      name: json['name'] as String?,
+      id: json['id'] as int,
+      name: json['name'] as String,
       governrate: json['governrate'] == null
           ? null
           : Specialization.fromJson(json['governrate'] as Map<String, dynamic>),
