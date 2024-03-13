@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/color.dart';
-import '../../../../../core/utils/font_weight_helper.dart';
-import '../../../../../core/utils/styles.dart';
+import '../utils/color.dart';
+import '../utils/font_weight_helper.dart';
+import '../utils/styles.dart';
 
-class CustomRecommendationBar extends StatelessWidget {
-  const CustomRecommendationBar({
-    super.key,
+class CustomAppBarWidget extends StatelessWidget {
+  const CustomAppBarWidget({
+    super.key, required this.text,
   });
-
+final String text;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -32,7 +32,7 @@ class CustomRecommendationBar extends StatelessWidget {
         ),
         Expanded(
           child: Text(
-            'Recommendation Doctor',
+            text,
             textAlign: TextAlign.center,
             style: Styles.font18Bold.copyWith(
               fontWeight: FontWeightHelper.semiBold,

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-
+import '../../../home/data/models/doctor_model.dart';
 import 'widget/recommendation_view_body.dart';
 
 class RecommendationView extends StatelessWidget {
-  const RecommendationView({super.key});
-
+  const RecommendationView({super.key, required this.doctorList});
+  final List<DoctorModel> doctorList;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
-        child: RecommendationViewBody(),
+        child: RecommendationViewBody(
+          doctorList: doctorList,
+        ),
       ),
     );
   }

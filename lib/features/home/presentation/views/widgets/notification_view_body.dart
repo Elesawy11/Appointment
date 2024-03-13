@@ -1,9 +1,8 @@
 import 'package:doc_doc_app/constants.dart';
+import 'package:doc_doc_app/core/widgets/custom_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/font_weight_helper.dart';
 import '../../../../../core/utils/spacer.dart';
@@ -17,37 +16,7 @@ class NotificationViewBody extends StatelessWidget {
     return Column(
       children: [
         verticalSpace(12),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
-          child: Row(
-            children: [
-              Container(
-                width: 44.w,
-                height: 44.h,
-                decoration: BoxDecoration(
-                  border: Border.all(color: ColorManager.lightWhite),
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-                child: IconButton(
-                  onPressed: () => context.pop(),
-                  icon: Icon(
-                    Icons.arrow_back_ios_new,
-                    size: 24.r,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Text(
-                  'Notification',
-                  textAlign: TextAlign.center,
-                  style: Styles.font18Bold.copyWith(
-                    fontWeight: FontWeightHelper.semiBold,
-                  ),
-                ),
-              )
-            ],
-          ),
-        ),
+        const CustomAppBarWidget(text: 'Notification'),
         verticalSpace(42),
         Expanded(
           child: Padding(
@@ -84,7 +53,6 @@ class NotificationViewBody extends StatelessWidget {
                                 'Congratulations - your appointment is confirmed! We\'re looking forward to meeting with you and helping you achieve your goals.',
                                 style: Styles.font12Regular
                                     .copyWith(color: ColorManager.grey),
-                                // overflow: TextOverflow.ellipsis,
                               ),
                             ),
                           ],

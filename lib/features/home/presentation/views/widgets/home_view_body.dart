@@ -2,7 +2,9 @@ import 'package:doc_doc_app/core/utils/routes.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../manager/doctor_cubit/doctor_cubit.dart';
 import 'custom_book_and_schedule_widget.dart';
 import 'custom_doctors_list_view.dart';
 import 'custom_specialist_lis_view.dart';
@@ -34,9 +36,8 @@ class HomeViewBody extends StatelessWidget {
               verticalSpace(23),
               CustomTextAndTextButton(
                 text: 'Recommendation Doctor',
-                onPressed: () => context.push(
-                  Routes.recommendationView,
-                ),
+                onPressed: () => context.push(Routes.recommendationView,
+                    extra: context.read<DoctorCubit>().listOfDoctors),
               ),
               verticalSpace(12),
             ],

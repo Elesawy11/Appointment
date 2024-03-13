@@ -38,7 +38,7 @@ class ApiService {
     var headers = {
       'Accept': 'application/json',
       'Authorization':
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzEwMTg5ODI5LCJleHAiOjE3MTAxOTM0MjksIm5iZiI6MTcxMDE4OTgyOSwianRpIjoiWXhjRnQxQjc0amo0bGdZeiIsInN1YiI6IjkwMCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Vl8uzzQVNTGW93J7LsRnI3Vdlk_rt1pi1OIVe9K9zlI'
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzEwMzA3Njc0LCJleHAiOjE3MTAzMTEyNzQsIm5iZiI6MTcxMDMwNzY3NCwianRpIjoibWkyTWpGTkJ5bkVVeVdDViIsInN1YiI6IjkwMCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QxOTDpeWwpQntQ9lyqrZX10Ts1eISBvt32Ji6C_aVNI'
     };
     var response = await dio.get(
         '${ApiConstants.apiBaseUrl}${ApiConstants.getAllDoctor}',
