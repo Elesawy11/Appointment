@@ -1,8 +1,10 @@
 import 'package:doc_doc_app/features/home/presentation/manager/doctor_cubit/doctor_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shimmer/shimmer.dart';
+import '../../../../../constants.dart';
 import 'custom_doctor_item.dart';
+import 'custom_doctor_loading_widget.dart';
 
 class CustomDoctorsListView extends StatelessWidget {
   const CustomDoctorsListView({
@@ -17,21 +19,8 @@ class CustomDoctorsListView extends StatelessWidget {
         bloc: cubit,
         builder: (context, state) {
           return state is GetDoctorLoading
-              ? Shimmer.fromColors(
-                  baseColor: Colors.white,
-                  highlightColor: Colors.white.withOpacity(0.8),
-                  child: Expanded(
-                    child: ListView.builder(
-                        clipBehavior: Clip.none,
-                        padding: EdgeInsets.zero,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 10,
-                        itemBuilder: (context, index) {
-                          return const Center(
-                            child: CircularProgressIndicator(),
-                          );
-                        }),
-                  ),
+              ? const CustomDoctorLoadingWidget(
+                  shimmerGradient: shimmerGradient,
                 )
               : state is GetDoctorFailure
                   ? Center(
@@ -43,15 +32,10 @@ class CustomDoctorsListView extends StatelessWidget {
                               clipBehavior: Clip.none,
                               padding: EdgeInsets.zero,
                               physics: const NeverScrollableScrollPhysics(),
-                              itemCount: context
-                                  .read<DoctorCubit>()
-                                  .listOfDoctors
-                                  .length,
+                              itemCount: state.doctorsList.length,
                               itemBuilder: (context, index) {
                                 return CustomDoctorItem(
-                                  doctorModel: context
-                                      .read<DoctorCubit>()
-                                      .listOfDoctors[index],
+                                  doctorModel: state.doctorsList[index],
                                 );
                               }),
                         )

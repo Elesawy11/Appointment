@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 const String logo = 'assets/svg_image/logo.svg';
 const String logoOpacity = 'assets/svg_image/logo_opacity.svg';
 const String home = 'assets/svg_image/home.svg';
@@ -24,3 +26,19 @@ const List<List<dynamic>> specialistDoctorList = [
   ['assets/image/gastroenterology.png', 'Gastroenterology', 9],
   ['assets/image/psychiatry.png', 'Psychiatry', 10],
 ];
+
+const shimmerGradient = LinearGradient(
+  colors: [
+    Color(0xFFEBEBF4),
+    Color(0xFFF4F4F4),
+    Color(0xFFEBEBF4),
+  ],
+  stops: [
+    0.1,
+    0.3,
+    0.4,
+  ],
+  begin: Alignment(-1.0, -0.3),
+  end: Alignment(1.0, 0.3),
+  tileMode: TileMode.clamp,
+);
