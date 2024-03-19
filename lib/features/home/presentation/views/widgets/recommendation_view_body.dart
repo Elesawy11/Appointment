@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/spacer.dart';
 import '../../../../../core/widgets/custom_app_bar_widget.dart';
-import '../../../../home/data/models/doctor_model.dart';
-import '../../../../home/presentation/views/widgets/custom_doctor_item.dart';
+import '../../../data/models/doctor_model.dart';
+import 'custom_doctor_item.dart';
 import 'recommendation_app_text_and_icon.dart';
 
 class RecommendationViewBody extends StatelessWidget {

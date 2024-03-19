@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../home/data/models/doctor_model.dart';
-import 'widget/recommendation_view_body.dart';
+import '../../data/models/doctor_model.dart';
+import 'widgets/recommendation_view_body.dart';
 
 class RecommendationView extends StatelessWidget {
   const RecommendationView({super.key, required this.doctorList});

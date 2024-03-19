@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widget/doctor_details_body.dart';
+import 'widgets/doctor_details_body.dart';
 
 class DoctorDetails extends StatelessWidget {
   const DoctorDetails({super.key});
