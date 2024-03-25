@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/utils/spacer.dart';
 import '../../../../../core/widgets/custom_app_bar_widget.dart';
 import '../../../data/models/doctor_model.dart';
@@ -30,8 +32,12 @@ class RecommendationViewBody extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 itemCount: doctorList.length,
                 itemBuilder: (context, index) {
-                  return CustomDoctorItem(
-                    doctorModel: doctorList[index],
+                  return GestureDetector(
+                    onTap: () => context.push(Routes.doctorDetailsView,
+                        extra: doctorList[index]),
+                    child: CustomDoctorItem(
+                      doctorModel: doctorList[index],
+                    ),
                   );
                 }),
           ))

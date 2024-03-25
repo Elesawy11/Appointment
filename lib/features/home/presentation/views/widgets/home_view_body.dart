@@ -1,4 +1,4 @@
-import 'package:doc_doc_app/core/utils/routes.dart';
+import 'package:doc_doc_app/core/routing/routes.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -44,6 +44,8 @@ class HomeViewBody extends StatelessWidget {
           ),
         ),
         const SliverFillRemaining(
+          // hasScrollBody: false,
+          fillOverscroll: true,
           child: CustomDoctorsListView(),
         ),
       ],

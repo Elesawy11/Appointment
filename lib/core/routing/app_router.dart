@@ -1,8 +1,9 @@
-import 'package:doc_doc_app/core/utils/routes.dart';
+import 'package:doc_doc_app/core/routing/routes.dart';
 import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:doc_doc_app/features/home/data/models/doctor_model.dart';
 import 'package:doc_doc_app/features/home/data/repo/home_repo.dart';
 import 'package:doc_doc_app/features/home/presentation/manager/doctor_cubit/doctor_cubit.dart';
+import 'package:doc_doc_app/features/home/presentation/views/doctor_details.dart';
 import 'package:doc_doc_app/features/home/presentation/views/home_view.dart';
 import 'package:doc_doc_app/features/home/presentation/views/notification_view.dart';
 import 'package:doc_doc_app/features/home/presentation/views/recommendation_view.dart';
@@ -31,7 +32,8 @@ abstract class AppRouter {
       GoRoute(
         path: Routes.homeView,
         builder: (context, state) => BlocProvider(
-          create: (context) => DoctorCubit(getIt.get<HomeRepo>())..getAllDoctor(),
+          create: (context) =>
+              DoctorCubit(getIt.get<HomeRepo>())..getAllDoctor(),
           child: const HomeView(),
         ),
       ),
@@ -46,6 +48,11 @@ abstract class AppRouter {
       GoRoute(
         path: Routes.notificationView,
         builder: (context, state) => const NotificationView(),
+      ),
+      GoRoute(
+        path: Routes.doctorDetailsView,
+        builder: (context, state) =>
+            DoctorDetailsView(doctorModel: state.extra as DoctorModel),
       ),
     ],
   );

@@ -1,4 +1,4 @@
-import 'package:doc_doc_app/constants.dart';
+import 'package:doc_doc_app/core/utils/assets.dart';
 import 'package:doc_doc_app/core/widgets/custom_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -31,7 +31,7 @@ class NotificationViewBody extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Image.asset(
-                          calendarTick,
+                          Assets.calendarTick,
                           width: 40.w,
                           height: 40.h,
                         ),

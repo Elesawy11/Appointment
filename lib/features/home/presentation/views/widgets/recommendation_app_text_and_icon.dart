@@ -1,3 +1,4 @@
+import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -26,6 +27,12 @@ class CustomAppTextAndIcon extends StatelessWidget {
             ),
           ),
         ),
+        horizontalSpace(12),
+        Image.asset(
+          'assets/image/sort.png',
+          width: 24.w,
+          height: 24.h,
+        )
       ],
     );
   }

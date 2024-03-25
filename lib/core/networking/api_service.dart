@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:doc_doc_app/core/utils/api_keys.dart';
 import 'package:doc_doc_app/features/login/data/models/login_request.dart';
 import 'package:doc_doc_app/features/signup/data/models/sign_up_request_model.dart';
 import 'api_constants.dart';
@@ -38,7 +39,7 @@ class ApiService {
     var headers = {
       'Accept': 'application/json',
       'Authorization':
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzEwMzA3Njc0LCJleHAiOjE3MTAzMTEyNzQsIm5iZiI6MTcxMDMwNzY3NCwianRpIjoibWkyTWpGTkJ5bkVVeVdDViIsInN1YiI6IjkwMCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QxOTDpeWwpQntQ9lyqrZX10Ts1eISBvt32Ji6C_aVNI'
+          'Bearer ${ApiKeys.token}'
     };
     var response = await dio.get(
         '${ApiConstants.apiBaseUrl}${ApiConstants.getAllDoctor}',

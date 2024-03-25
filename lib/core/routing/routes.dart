@@ -6,5 +6,5 @@ abstract class Routes {
   static const String specialityView = '/specialityView';
   static const String recommendationView = '/recommendationView';
   static const String notificationView = '/notificationView';
-
+  static const String doctorDetailsView = '/doctorDetailsView';
 }

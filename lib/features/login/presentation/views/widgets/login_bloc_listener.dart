@@ -1,6 +1,6 @@
 import 'package:doc_doc_app/core/utils/color.dart';
 import 'package:doc_doc_app/core/utils/font_weight_helper.dart';
-import 'package:doc_doc_app/core/utils/routes.dart';
+import 'package:doc_doc_app/core/routing/routes.dart';
 import 'package:doc_doc_app/core/utils/styles.dart';
 import 'package:doc_doc_app/features/login/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
@@ -33,8 +33,10 @@ class LoginBlocListener extends StatelessWidget {
                     },
                   )
                 : {
+                  
                     GoRouter.of(context).pop(),
                     context.go(Routes.homeView),
+                    
                   };
       },
       child: const SizedBox.shrink(),
