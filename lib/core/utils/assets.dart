@@ -3,7 +3,9 @@ abstract class Assets {
   static const String logoOpacity = 'assets/svg_image/logo_opacity.svg';
   static const String home = 'assets/svg_image/home.svg';
   static const String message = 'assets/svg_image/message.svg';
-  
+  static const String doctor =
+      'https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*';
+
   static const String calendar = 'assets/svg_image/calendar.svg';
   static const String onboarding = 'assets/image/onboarding.png';
   static const String bookImage = 'assets/image/book_image.png';
@@ -22,4 +24,5 @@ abstract class Assets {
   static const String psychiatry = 'assets/image/psychiatry.png';
   static const String sort = 'assets/image/sort.png';
   static const String urology = 'assets/image/urology.png';
+  static const String messageText = 'assets/image/message-text.png';
 }

@@ -13,9 +13,18 @@ import 'package:doc_doc_app/features/onboarding/presentation/views/onboarding_vi
 import 'package:doc_doc_app/features/signup/presentation/views/signup_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(
+    redirect: (context, state) async {
+      final SharedPreferences pref = await SharedPreferences.getInstance();
+      if (pref.getBool('isLogin') ?? false) {
+        return Routes.homeView;
+      } else {
+        return Routes.onboardingView;
+      }
+    },
     routes: [
       GoRoute(
         path: Routes.onboardingView,
@@ -42,17 +51,20 @@ abstract class AppRouter {
         builder: (context, state) => const SpecialityView(),
       ),
       GoRoute(
-          path: Routes.recommendationView,
-          builder: (context, state) =>
-              RecommendationView(doctorList: state.extra as List<DoctorModel>)),
+        path: Routes.recommendationView,
+        builder: (context, state) => RecommendationView(
+          doctorList: state.extra as List<DoctorModel>,
+        ),
+      ),
       GoRoute(
         path: Routes.notificationView,
         builder: (context, state) => const NotificationView(),
       ),
       GoRoute(
         path: Routes.doctorDetailsView,
-        builder: (context, state) =>
-            DoctorDetailsView(doctorModel: state.extra as DoctorModel),
+        builder: (context, state) => DoctorDetailsView(
+          doctorModel: state.extra as DoctorModel,
+        ),
       ),
     ],
   );
