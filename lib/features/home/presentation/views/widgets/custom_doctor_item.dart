@@ -17,24 +17,25 @@ class CustomDoctorItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.17,
+      height: 126.h,
+      width: 344.w,
       child: Stack(
         children: [
-          Container(
-            width: 202.w,
-            height: 75.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16.r),
-              color: Colors.white,
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0.0, 1.0), //(x,y)
-                  blurRadius: 6.0,
-                ),
-              ],
-            ),
-          ),
+          // Container(
+          //   width: 202.w,
+          //   height: 75.h,
+          //   decoration: BoxDecoration(
+          //     borderRadius: BorderRadius.circular(16.r),
+          //     color: Colors.white,
+          //     boxShadow: const [
+          //       BoxShadow(
+          //         color: Colors.grey,
+          //         offset: Offset(0.0, 1.0), //(x,y)
+          //         blurRadius: 6.0,
+          //       ),
+          //     ],
+          //   ),
+          // ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
