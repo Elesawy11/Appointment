@@ -1,3 +1,4 @@
+import 'package:doc_doc_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -65,7 +66,7 @@ class CustomBookAndScheduleWidget extends StatelessWidget {
           right: 15,
           bottom: 0,
           child: Image.asset(
-            bookImage,
+            Assets.bookImage,
             fit: BoxFit.fill,
             width: 136.w,
             height: 197.h,

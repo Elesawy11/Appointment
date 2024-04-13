@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../core/utils/assets.dart';
+
 class CustomOnboardingTitle extends StatelessWidget {
   const CustomOnboardingTitle({super.key});
 
@@ -14,7 +16,7 @@ class CustomOnboardingTitle extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SvgPicture.asset(
-          logo,
+          Assets.logo,
           width: 38.w,
           height: 38.h,
         ),

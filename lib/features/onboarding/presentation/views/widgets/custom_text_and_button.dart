@@ -1,9 +1,8 @@
-import 'package:doc_doc_app/core/utils/routes.dart';
+import 'package:doc_doc_app/core/routing/routes.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/styles.dart';
 import '../../../../../core/widgets/app_text_button.dart';
@@ -27,7 +26,9 @@ class CustomTextAndTextButton extends StatelessWidget {
           verticalSpace(32),
           AppTextButton(
             text: 'Get Started',
-            onPressed: () => context.go(Routes.loginView),
+            onPressed: () {
+              context.go(Routes.loginView);
+            },
           ),
           verticalSpace(32),
         ],

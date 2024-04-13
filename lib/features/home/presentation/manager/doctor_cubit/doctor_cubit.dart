@@ -10,19 +10,21 @@ class DoctorCubit extends Cubit<DoctorState> {
   DoctorCubit(this._homeRepo) : super(DoctorInitial());
 
   final HomeRepo _homeRepo;
+  List<DoctorModel> listOfDoctors = [];
 
   Future<void> getAllDoctor() async {
     emit(GetDoctorLoading());
     var response = await _homeRepo.getAllDoctor();
-    
 
     response.fold(
-      (failure) => emit(GetDoctorFailure(failure.apiErrorModel.message!)),
-      (doctorsList) => emit(
+        (failure) => emit(GetDoctorFailure(failure.apiErrorModel.message!)),
+        (doctorsList) {
+      listOfDoctors = doctorsList;
+      emit(
         GetDoctorSuccess(
           doctorsList: doctorsList,
         ),
-      ),
-    );
+      );
+    });
   }
 }

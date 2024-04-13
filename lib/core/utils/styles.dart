@@ -23,6 +23,10 @@ abstract class Styles {
     fontSize: 18.sp,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font20Medium = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.medium,
+  );
   static TextStyle font24Bold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,

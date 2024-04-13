@@ -1,3 +1,4 @@
+import 'package:doc_doc_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -5,10 +6,12 @@ import '../../../../../constants.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({
-    super.key, this.onDestinationSelected, required this.selectedIndex,
+    super.key,
+    this.onDestinationSelected,
+    required this.selectedIndex,
   });
-final Function(int)? onDestinationSelected;
-final int selectedIndex;
+  final Function(int)? onDestinationSelected;
+  final int selectedIndex;
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
@@ -17,11 +20,11 @@ final int selectedIndex;
       backgroundColor: Colors.white,
       labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
       onDestinationSelected: onDestinationSelected,
-      selectedIndex:selectedIndex ,
+      selectedIndex: selectedIndex,
       destinations: <Widget>[
         NavigationDestination(
           icon: SvgPicture.asset(
-            home,
+            Assets.home,
             width: 24.w,
             height: 24.h,
           ),
@@ -29,7 +32,7 @@ final int selectedIndex;
         ),
         NavigationDestination(
           icon: SvgPicture.asset(
-            message,
+            Assets.message,
             width: 24.w,
             height: 24.h,
           ),
@@ -37,7 +40,7 @@ final int selectedIndex;
         ),
         NavigationDestination(
           icon: SvgPicture.asset(
-            calendar,
+            Assets.calendar,
             width: 24.w,
             height: 24.h,
           ),
@@ -45,7 +48,7 @@ final int selectedIndex;
         ),
         NavigationDestination(
           icon: Image.asset(
-            account,
+            Assets.account,
             width: 24.w,
             height: 24.h,
           ),
