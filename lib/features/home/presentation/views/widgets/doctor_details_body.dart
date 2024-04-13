@@ -1,3 +1,4 @@
+import 'package:doc_doc_app/core/routing/routes.dart';
 import 'package:doc_doc_app/core/utils/assets.dart';
 import 'package:doc_doc_app/core/utils/color.dart';
 import 'package:doc_doc_app/core/utils/font_weight_helper.dart';
@@ -10,6 +11,7 @@ import 'package:doc_doc_app/features/home/presentation/views/widgets/custom_doct
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'custom_doctor_definition.dart';
 
 class DoctorDetailsBody extends StatefulWidget {
@@ -23,27 +25,27 @@ class DoctorDetailsBody extends StatefulWidget {
 class _DoctorDetailsBodyState extends State<DoctorDetailsBody>
     with TickerProviderStateMixin {
   late PageController pageViewController;
-  late TabController tabController;
+
   int currentPageIndex = 0;
 
   @override
   void initState() {
     super.initState();
     pageViewController = PageController();
-    tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
     super.dispose();
     pageViewController.dispose();
-    tabController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24.w),
+      padding: EdgeInsets.symmetric(
+        horizontal: 24.w,
+      ),
       child: Column(
         children: [
           const CustomAppBarWidget(text: 'Dr Randy Wigham'),
@@ -76,6 +78,7 @@ class _DoctorDetailsBodyState extends State<DoctorDetailsBody>
           SizedBox(
             height: 44.h,
             child: ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: texts.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
@@ -109,7 +112,7 @@ class _DoctorDetailsBodyState extends State<DoctorDetailsBody>
           ),
           verticalSpace(32),
           SizedBox(
-            height: 422.h,
+            height: 497.h,
             child: PageView(
               scrollDirection: Axis.horizontal,
               onPageChanged: (value) {
@@ -126,8 +129,14 @@ class _DoctorDetailsBodyState extends State<DoctorDetailsBody>
               ],
             ),
           ),
-          verticalSpace(24),
-          const AppTextButton(text: 'Make An Appointment'),
+          const Spacer(),
+          AppTextButton(
+            text: 'Make An Appointment',
+            onPressed: () => context.push(
+              '${Routes.recommendationView}/${Routes.bookAppointmentView}',
+              extra: widget.doctorModel,
+            ),
+          ),
           const Spacer(),
         ],
       ),

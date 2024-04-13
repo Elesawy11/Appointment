@@ -17,6 +17,7 @@ class AppTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final Function(String?) validator;
   final Widget? prefixIcon;
+  final int? maxLines;
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -29,41 +30,45 @@ class AppTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.backgroundColor,
     this.controller,
-    required this.validator, this.prefixIcon,
+    required this.validator,
+    this.prefixIcon,
+    this.maxLines = 1,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      
       controller: controller,
+      maxLines: maxLines,
       decoration: InputDecoration(
-        isDense: true,
-        contentPadding: contentPadding ??
-            EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
-        focusedBorder: focusedBorder ??
-            outLineBorder(
-              color: ColorManager.mainBlue,
-            ),
-        enabledBorder: enabledBorder ??
-            outLineBorder(
-              color: ColorManager.lighterGray,
-            ),
-        errorBorder: outLineBorder(
-          color: Colors.red,
-        ),
-        focusedErrorBorder: outLineBorder(
-          color: Colors.red,
-        ),
-        hintStyle: hintStyle ??
-            Styles.font14Regular.copyWith(
-              color: ColorManager.lightGray,
-            ),
-        hintText: hintText,
-        suffixIcon: suffixIcon,
-        fillColor: backgroundColor ?? ColorManager.moreLightGray,
-        filled: true,
-        prefixIcon: prefixIcon
-      ),
+        
+          isDense: true,
+          contentPadding: contentPadding ??
+              EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
+          focusedBorder: focusedBorder ??
+              outLineBorder(
+                color: ColorManager.mainBlue,
+              ),
+          enabledBorder: enabledBorder ??
+              outLineBorder(
+                color: ColorManager.lighterGray,
+              ),
+          errorBorder: outLineBorder(
+            color: Colors.red,
+          ),
+          focusedErrorBorder: outLineBorder(
+            color: Colors.red,
+          ),
+          hintStyle: hintStyle ??
+              Styles.font14Regular.copyWith(
+                color: ColorManager.lightGray,
+              ),
+          hintText: hintText,
+          suffixIcon: suffixIcon,
+          fillColor: backgroundColor ?? ColorManager.moreLightGray,
+          filled: true,
+          prefixIcon: prefixIcon),
       obscureText: isObscureText ?? false,
       style: Styles.font14Regular.copyWith(
         fontWeight: FontWeightHelper.medium,

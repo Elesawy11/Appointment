@@ -33,7 +33,7 @@ class RecommendationViewBody extends StatelessWidget {
                 itemCount: doctorList.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    onTap: () => context.push(Routes.doctorDetailsView,
+                    onTap: () => context.push('${Routes.recommendationView}/${Routes.doctorDetailsView}',
                         extra: doctorList[index]),
                     child: CustomDoctorItem(
                       doctorModel: doctorList[index],

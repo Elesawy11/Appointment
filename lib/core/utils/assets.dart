@@ -5,6 +5,13 @@ abstract class Assets {
   static const String message = 'assets/svg_image/message.svg';
   static const String calendar = 'assets/svg_image/calendar.svg';
   static const String account1 = 'assets/svg_image/account1.svg';
+  static const String masterCard = 'assets/svg_image/mastercard.svg';
+  static const String barclays = 'assets/svg_image/barclays.svg';
+  static const String capitalOne = 'assets/svg_image/capital_one.svg';
+  static const String americanExpress = 'assets/svg_image/american_express.svg';
+  static const String dateTime = 'assets/svg_image/date_time.svg';
+  static const String appointmentType = 'assets/svg_image/appointment_type.svg';
+  static const String bookConfirmed = 'assets/svg_image/book_confirmed.svg';
 
   static const String doctor =
       'https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*';
@@ -29,4 +36,7 @@ abstract class Assets {
   static const String messageText = 'assets/image/message-text.png';
   static const String map = 'assets/image/map.png';
   static const String review = 'assets/image/review.png';
+  static const String video = 'assets/image/video.png';
+  static const String inperson = 'assets/image/inperson.png';
+  static const String call = 'assets/image/call.png';
 }
