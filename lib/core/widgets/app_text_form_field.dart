@@ -18,6 +18,8 @@ class AppTextFormField extends StatelessWidget {
   final Function(String?) validator;
   final Widget? prefixIcon;
   final int? maxLines;
+  final void Function()? onTap;
+  final void Function(PointerDownEvent)? onTapOutside;
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -32,13 +34,14 @@ class AppTextFormField extends StatelessWidget {
     this.controller,
     required this.validator,
     this.prefixIcon,
-    this.maxLines = 1,
+    this.maxLines = 1, this.onTap, this.onTapOutside,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      
+      onTapOutside:onTapOutside ,
+      onTap: onTap,
       controller: controller,
       maxLines: maxLines,
       decoration: InputDecoration(
