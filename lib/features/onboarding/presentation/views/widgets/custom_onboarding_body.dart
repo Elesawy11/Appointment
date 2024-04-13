@@ -4,6 +4,8 @@ import 'package:doc_doc_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../core/utils/assets.dart';
+
 class CustomOnboardingBody extends StatelessWidget {
   const CustomOnboardingBody({super.key});
 
@@ -12,7 +14,7 @@ class CustomOnboardingBody extends StatelessWidget {
     return Stack(
       children: [
         SvgPicture.asset(
-          logoOpacity,
+          Assets.logoOpacity,
           fit: BoxFit.fill,
         ),
         Container(
@@ -27,7 +29,7 @@ class CustomOnboardingBody extends StatelessWidget {
               stops: const [0.14, 0.4],
             ),
           ),
-          child: Image.asset(onboarding),
+          child: Image.asset(Assets.onboarding),
         ),
         Positioned(
           bottom: 30,

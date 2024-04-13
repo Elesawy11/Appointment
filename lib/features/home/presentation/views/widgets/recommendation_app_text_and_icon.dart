@@ -1,4 +1,7 @@
+import 'package:doc_doc_app/core/utils/spacer.dart';
+import 'package:doc_doc_app/features/home/presentation/views/widgets/custom_show_model_shet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../../core/utils/color.dart';
@@ -26,6 +29,8 @@ class CustomAppTextAndIcon extends StatelessWidget {
             ),
           ),
         ),
+        horizontalSpace(12),
+        const CustomShowModelButtonSheet(),
       ],
     );
   }

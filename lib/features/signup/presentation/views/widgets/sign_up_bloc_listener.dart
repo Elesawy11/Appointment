@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/font_weight_helper.dart';
-import '../../../../../core/utils/routes.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/utils/styles.dart';
 
 class SignUpBlocListener extends StatelessWidget {
