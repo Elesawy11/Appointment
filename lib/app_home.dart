@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'widgets/custom_button_navigstion_bar.dart';
-import 'widgets/custom_floating_action_button.dart';
-import 'widgets/home_view_body.dart';
+import 'features/home/presentation/views/widgets/custom_floating_action_button.dart';
 
 class AppHome extends StatelessWidget {
   const AppHome({super.key, required this.navigationshell});
