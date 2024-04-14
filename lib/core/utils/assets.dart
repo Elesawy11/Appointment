@@ -12,6 +12,10 @@ abstract class Assets {
   static const String dateTime = 'assets/svg_image/date_time.svg';
   static const String appointmentType = 'assets/svg_image/appointment_type.svg';
   static const String bookConfirmed = 'assets/svg_image/book_confirmed.svg';
+  static const String addChat = 'assets/svg_image/add_chat.svg';
+  static const String videoCall = 'assets/svg_image/video_call.svg';
+  static const String record = 'assets/svg_image/record.svg';
+  static const String sendMessage = 'assets/svg_image/send_message.svg';
 
   static const String doctor =
       'https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*';
