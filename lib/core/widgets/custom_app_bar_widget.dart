@@ -8,9 +8,12 @@ import '../utils/styles.dart';
 
 class CustomAppBarWidget extends StatelessWidget {
   const CustomAppBarWidget({
-    super.key, required this.text,
+    super.key,
+    required this.text,
+    this.icon,
   });
-final String text;
+  final String text;
+  final IconData? icon;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -25,7 +28,7 @@ final String text;
           child: IconButton(
             onPressed: () => context.pop(),
             icon: Icon(
-              Icons.arrow_back_ios_new,
+              icon ?? Icons.arrow_back_ios_new,
               size: 24.r,
             ),
           ),
