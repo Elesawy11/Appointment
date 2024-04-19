@@ -8,6 +8,7 @@ abstract class Routes {
   static const String messagesView = '/messagesView';
   static const String calenderView = '/calenderView';
   static const String profileView = '/profileView';
+  static const String myAppointmentView = '/myAppointmentView';
 
   static const String specialityView = '/specialityView';
   static const String recommendationView = '/recommendationView';
