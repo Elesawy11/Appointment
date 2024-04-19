@@ -12,6 +12,7 @@ import 'package:doc_doc_app/features/home/presentation/views/notification_view.d
 import 'package:doc_doc_app/features/home/presentation/views/recommendation_view.dart';
 import 'package:doc_doc_app/features/home/presentation/views/speciality_view.dart';
 import 'package:doc_doc_app/features/login/presentation/views/login_view.dart';
+import 'package:doc_doc_app/features/my_appointment/presentation/views/my_appointment_view.dart';
 import 'package:doc_doc_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:doc_doc_app/features/signup/presentation/views/signup_view.dart';
 import 'package:flutter/material.dart';
@@ -70,8 +71,12 @@ abstract class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: Routes.calenderView,
-                builder: (context, state) => const CalenderView(),
+                path: Routes.myAppointmentView,
+                builder: (context, state) => BlocProvider(
+                  create: (context) =>
+                      DoctorCubit(getIt.get<HomeRepo>())..getAllDoctor(),
+                  child: const MyAppointmentView(),
+                ),
               ),
             ],
           ),
