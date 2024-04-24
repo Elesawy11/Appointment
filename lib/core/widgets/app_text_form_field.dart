@@ -34,18 +34,19 @@ class AppTextFormField extends StatelessWidget {
     this.controller,
     required this.validator,
     this.prefixIcon,
-    this.maxLines = 1, this.onTap, this.onTapOutside,
+    this.maxLines = 1,
+    this.onTap,
+    this.onTapOutside,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      onTapOutside:onTapOutside ,
+      onTapOutside: onTapOutside,
       onTap: onTap,
       controller: controller,
       maxLines: maxLines,
       decoration: InputDecoration(
-        
           isDense: true,
           contentPadding: contentPadding ??
               EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
@@ -55,7 +56,7 @@ class AppTextFormField extends StatelessWidget {
               ),
           enabledBorder: enabledBorder ??
               outLineBorder(
-                color: ColorManager.lighterGray,
+                color: ColorManager.grayED,
               ),
           errorBorder: outLineBorder(
             color: Colors.red,
@@ -65,11 +66,11 @@ class AppTextFormField extends StatelessWidget {
           ),
           hintStyle: hintStyle ??
               Styles.font14Regular.copyWith(
-                color: ColorManager.lightGray,
+                color: ColorManager.grayC2,
               ),
           hintText: hintText,
           suffixIcon: suffixIcon,
-          fillColor: backgroundColor ?? ColorManager.moreLightGray,
+          fillColor: backgroundColor ?? ColorManager.grayFD,
           filled: true,
           prefixIcon: prefixIcon),
       obscureText: isObscureText ?? false,

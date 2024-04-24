@@ -20,12 +20,12 @@ class CustomAppTextAndIcon extends StatelessWidget {
           width: 300.w,
           child: AppTextFormField(
             contentPadding: EdgeInsets.only(left: 18.w, right: 12.w),
-            backgroundColor: ColorManager.whiteOpacity,
+            backgroundColor: ColorManager.whiteF5,
             hintText: 'search',
             validator: (value) {},
             prefixIcon: const Icon(
               FontAwesomeIcons.magnifyingGlass,
-              color: ColorManager.lightGray,
+              color: ColorManager.grayC2,
             ),
           ),
         ),

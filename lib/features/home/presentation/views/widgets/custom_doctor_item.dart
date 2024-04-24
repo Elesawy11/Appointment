@@ -65,7 +65,7 @@ class CustomDoctorItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: Styles.font12Regular.copyWith(
                         fontWeight: FontWeightHelper.medium,
-                        color: ColorManager.grey,
+                        color: ColorManager.grey75,
                       ),
                     ),
                     verticalSpace(12),
@@ -77,7 +77,7 @@ class CustomDoctorItem extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: Styles.font12Regular.copyWith(
                             fontWeight: FontWeightHelper.medium,
-                            color: ColorManager.grey,
+                            color: ColorManager.grey75,
                           ),
                         ),
                         horizontalSpace(6),
@@ -87,7 +87,7 @@ class CustomDoctorItem extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: Styles.font12Regular.copyWith(
                             fontWeight: FontWeightHelper.medium,
-                            color: ColorManager.grey,
+                            color: ColorManager.grey75,
                           ),
                         ),
                       ],

@@ -14,20 +14,20 @@ class DividerAndText extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.3,
           child: const Divider(
-            color: ColorManager.lightGray,
+            color: ColorManager.grayC2,
             thickness: 2,
           ),
         ),
         Text(
           ' Or sign up ',
           style: Styles.font13Regular.copyWith(
-            color: ColorManager.grey,
+            color: ColorManager.grey75,
           ),
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.3,
           child: const Divider(
-            color: ColorManager.lightGray,
+            color: ColorManager.grayC2,
             thickness: 2,
           ),
         ),

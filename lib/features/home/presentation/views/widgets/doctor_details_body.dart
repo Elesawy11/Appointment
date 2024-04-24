@@ -88,7 +88,7 @@ class _DoctorDetailsBodyState extends State<DoctorDetailsBody>
                       bottom: BorderSide(
                         color: currentPageIndex == index
                             ? ColorManager.mainBlue
-                            : ColorManager.lightGray,
+                            : ColorManager.grayC2,
                         width: 2,
                       ),
                     ),
@@ -102,7 +102,7 @@ class _DoctorDetailsBodyState extends State<DoctorDetailsBody>
                         fontWeight: FontWeightHelper.bold,
                         color: currentPageIndex == index
                             ? ColorManager.mainBlue
-                            : ColorManager.greyOpacity,
+                            : ColorManager.grey9E,
                       ),
                     ),
                   ),

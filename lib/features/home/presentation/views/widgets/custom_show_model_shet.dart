@@ -44,7 +44,7 @@ class _CustomShowModelButtonSheetState
                         width: 58.w,
                         child: const Divider(
                           thickness: 4,
-                          color: ColorManager.lightWhite,
+                          color: ColorManager.grayED,
                         ),
                       ),
                       verticalSpace(32),
@@ -58,7 +58,7 @@ class _CustomShowModelButtonSheetState
                         padding: EdgeInsets.only(left: 24.w),
                         child: const Divider(
                           thickness: 2,
-                          color: ColorManager.lighterGray,
+                          color: ColorManager.grayED,
                         ),
                       ),
                       verticalSpace(32),
@@ -94,7 +94,7 @@ class _CustomShowModelButtonSheetState
                                       borderRadius: BorderRadius.circular(24.r),
                                       color: isChosen
                                           ? ColorManager.mainBlue
-                                          : ColorManager.grey),
+                                          : ColorManager.grey75),
                                   child: Center(
                                     child: Text(
                                       specialistDoctorList[index][1],
@@ -142,7 +142,7 @@ class _CustomShowModelButtonSheetState
                                       borderRadius: BorderRadius.circular(24.r),
                                       color: isChosen
                                           ? ColorManager.mainBlue
-                                          : ColorManager.grey),
+                                          : ColorManager.grey75),
                                   child: Center(
                                     child: Text(
                                       specialistDoctorList[index][1],
