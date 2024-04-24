@@ -59,7 +59,7 @@ class BookingAppointmentDetailsBody extends StatelessWidget {
                             width: 58.w,
                             child: const Divider(
                               thickness: 4,
-                              color: ColorManager.lightWhite,
+                              color: ColorManager.grayED,
                             ),
                           ),
                           verticalSpace(32),
@@ -103,7 +103,7 @@ class BookingAppointmentDetailsBody extends StatelessWidget {
                           ),
                           verticalSpace(24),
                           AppTextFormField(
-                            backgroundColor: ColorManager.lighterWhite,
+                            backgroundColor: ColorManager.whiteE0,
                             hintText: 'Your review',
                             validator: (value) {},
                             maxLines: 3,

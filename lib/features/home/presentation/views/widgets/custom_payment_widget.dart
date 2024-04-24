@@ -7,7 +7,6 @@ import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/font_weight_helper.dart';
 import '../../../../../core/utils/spacer.dart';
 import '../../../../../core/utils/styles.dart';
-import 'book_appointment_body.dart';
 import 'custom_doctor_definition.dart';
 
 class CustomPaymentWidget extends StatelessWidget {
@@ -49,6 +48,7 @@ class CustomPaymentWidget extends StatelessWidget {
     );
   }
 }
+
 class PaymentOptionsWidget extends StatefulWidget {
   const PaymentOptionsWidget({
     super.key,

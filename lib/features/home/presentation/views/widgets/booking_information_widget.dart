@@ -49,7 +49,7 @@ class BookingInformationWidget extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12.r),
               border: Border.all(
-                color: ColorManager.lighterGray,
+                color: ColorManager.grayED,
               )),
           child: Column(
             children: [
@@ -118,7 +118,7 @@ class CustomListTile extends StatelessWidget {
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: ColorManager.lighterGray,
+            color: ColorManager.grayED,
           ),
         ),
       ),
@@ -138,7 +138,7 @@ class CustomListTile extends StatelessWidget {
         subtitle: Text(
           subtitle,
           style: Styles.font12Regular.copyWith(
-            color: ColorManager.grey,
+            color: ColorManager.grey75,
           ),
         ),
       ),

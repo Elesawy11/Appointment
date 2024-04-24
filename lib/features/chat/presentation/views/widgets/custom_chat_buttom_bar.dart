@@ -40,7 +40,7 @@ class _CustomChatButtomBarState extends State<CustomChatButtomBar> {
             validator: (value) {},
             prefixIcon: const Icon(
               Icons.emoji_emotions_outlined,
-              color: ColorManager.greyOpacity,
+              color: ColorManager.grey9E,
             ),
             suffixIcon: SizedBox(
               width: 24.w,
@@ -48,7 +48,7 @@ class _CustomChatButtomBarState extends State<CustomChatButtomBar> {
                 children: [
                   const Icon(
                     FontAwesomeIcons.paperclip,
-                    color: ColorManager.greyOpacity,
+                    color: ColorManager.grey9E,
                   ),
                   horizontalSpace(4),
                   GestureDetector(
@@ -59,7 +59,7 @@ class _CustomChatButtomBarState extends State<CustomChatButtomBar> {
                     },
                     child: const Icon(
                       Icons.camera_alt_rounded,
-                      color: ColorManager.greyOpacity,
+                      color: ColorManager.grey9E,
                     ),
                   ),
                 ],

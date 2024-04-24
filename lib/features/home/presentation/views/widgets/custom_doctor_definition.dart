@@ -152,7 +152,6 @@ class DoctorReviews extends StatelessWidget {
   }
 }
 
-
 List<String> texts = ['About', 'Location', 'Rewiews'];
 
 class TextSubTitle extends StatelessWidget {
@@ -167,7 +166,7 @@ class TextSubTitle extends StatelessWidget {
     return Text(
       text,
       style: Styles.font14Regular.copyWith(
-        color: ColorManager.grey,
+        color: ColorManager.grey75,
       ),
     );
   }

@@ -14,16 +14,7 @@ class AppHome extends StatelessWidget {
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniCenterFloat,
       floatingActionButton: const CustomFloatingActionButton(),
-      // bottomNavigationBar: CustomBottomNavigationBar(
-      //   onDestinationSelected: (int index) {
-      //     setState(() {
-      //       currentPageIndex = index;
-      //     });
-      //   },
-      //   selectedIndex: currentPageIndex,
-      // ),
       body: navigationshell,
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: navigationshell.currentIndex,
         onTap: (int index) => navigationshell.goBranch(index),
@@ -58,56 +49,8 @@ class AppHome extends StatelessWidget {
             label: 'Profile',
             index: 3,
           ),
-          // BottomNavigationBarItem(
-          //   icon: SvgPicture.asset(Assets.message),
-          //   label: 'Message',
-          // ),
-          // BottomNavigationBarItem(
-          //   icon: SvgPicture.asset(Assets.calendar),
-          //   label: 'Calender',
-          // ),
-          // BottomNavigationBarItem(
-          //   icon: Image.asset(
-          //     Assets.account,
-          //     width: 24.w,
-          //     height: 24.h,
-          //   ),
-          //   label: 'Account',
-          // ),
         ],
       ),
-      // [
-      //   SafeArea(
-      //     child: Padding(
-      //       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      //       child: const HomeViewBody(),
-      //     ),
-      //   ),
-      //   SafeArea(
-      //     child: Padding(
-      //       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      //       child: const Center(
-      //         child: Text('chat Screen'),
-      //       ),
-      //     ),
-      //   ),
-      //   SafeArea(
-      //     child: Padding(
-      //       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      //       child: const Center(
-      //         child: Text('calendar Screen'),
-      //       ),
-      //     ),
-      //   ),
-      //   SafeArea(
-      //     child: Padding(
-      //       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      //       child: const Center(
-      //         child: Text('profile Screen'),
-      //       ),
-      //     ),
-      //   ),
-      // ][currentPageIndex],
     );
   }
 

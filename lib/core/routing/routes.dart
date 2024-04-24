@@ -16,4 +16,13 @@ abstract class Routes {
   static const String doctorDetailsView = 'doctorDetailsView';
   static const String bookAppointmentView = 'bookAppointmentView';
   static const String bookingAppointmentDetails = 'bookingAppointmentDetails';
+  static const String settingView = 'settingView';
+  static const String settingNotificationView = 'settingNotificationView';
+  static const String fAQView = 'fAQView';
+  static const String securityView = 'securityView';
+  static const String languageView = 'languageView';
+  static const String personalInfoView = '/personalInfoView';
+  static const String medicalRecordesView = '/medicalRecordesView';
+  static const String paymentView = '/paymentView';
+
 }

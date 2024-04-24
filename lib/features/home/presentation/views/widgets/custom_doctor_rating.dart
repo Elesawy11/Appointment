@@ -25,7 +25,7 @@ class CustomDoctorRating extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style: Styles.font12Regular.copyWith(
             fontWeight: FontWeightHelper.medium,
-            color: ColorManager.grey,
+            color: ColorManager.grey75,
           ),
         ),
         horizontalSpace(6),
@@ -35,7 +35,7 @@ class CustomDoctorRating extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style: Styles.font12Regular.copyWith(
             fontWeight: FontWeightHelper.medium,
-            color: ColorManager.grey,
+            color: ColorManager.grey75,
           ),
         ),
       ],
