@@ -25,7 +25,7 @@ class CustomMessageWidget extends StatelessWidget {
         decoration: const BoxDecoration(
           border: Border(
             bottom: BorderSide(
-              color: ColorManager.lighterGray,
+              color: ColorManager.grayED,
             ),
           ),
         ),
@@ -54,7 +54,7 @@ class CustomMessageWidget extends StatelessWidget {
                     Text(
                       '7:11 PM',
                       style: Styles.font12Regular.copyWith(
-                        color: ColorManager.grey,
+                        color: ColorManager.grey75,
                       ),
                     ),
                   ],
@@ -62,7 +62,7 @@ class CustomMessageWidget extends StatelessWidget {
                 Text(
                   'General Doctor | RSUD Gatot Subroto',
                   style: Styles.font12Regular.copyWith(
-                    color: ColorManager.hardGrey,
+                    color: ColorManager.grey61,
                   ),
                 ),
               ],
@@ -78,7 +78,7 @@ class CustomMessageWidget extends StatelessWidget {
                       child: Text(
                         'Fine, I\'ll do a check. Does the patient have a history of certain diseases?',
                         style: Styles.font12Regular.copyWith(
-                          color: ColorManager.grey,
+                          color: ColorManager.grey75,
                         ),
                       ),
                     ),

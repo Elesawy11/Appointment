@@ -52,7 +52,7 @@ class NotificationViewBody extends StatelessWidget {
                               child: Text(
                                 'Congratulations - your appointment is confirmed! We\'re looking forward to meeting with you and helping you achieve your goals.',
                                 style: Styles.font12Regular
-                                    .copyWith(color: ColorManager.grey),
+                                    .copyWith(color: ColorManager.grey75),
                               ),
                             ),
                           ],

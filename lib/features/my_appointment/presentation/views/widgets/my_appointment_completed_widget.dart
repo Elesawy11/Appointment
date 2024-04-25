@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,10 +10,12 @@ import '../../../../home/presentation/views/widgets/custom_doctor_item.dart';
 
 class MyAppointmentCompletedWidget extends StatelessWidget {
   const MyAppointmentCompletedWidget({
-    super.key, required this.mainText, this.color,
+    super.key,
+    required this.mainText,
+    this.color,
   });
-final String mainText;
-final Color? color;
+  final String mainText;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,7 +32,7 @@ final Color? color;
                       decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                            color: ColorManager.lighterGray,
+                            color: ColorManager.grayED,
                           ),
                         ),
                       ),
@@ -39,34 +40,32 @@ final Color? color;
                         title: Text(
                           mainText,
                           style: Styles.font12Regular.copyWith(
-                            color:color?? Colors.green,
+                            color: color ?? Colors.green,
                           ),
                         ),
                         subtitle: Text(
                           'Wed, 17 May | 08.30 AM',
                           style: Styles.font12Regular.copyWith(
-                            color: ColorManager.hardGrey,
+                            color: ColorManager.grey61,
                           ),
                         ),
                         trailing: Icon(
                           Icons.more_vert,
                           size: 24.r,
-                          color: ColorManager.greyOpacity,
+                          color: ColorManager.grey9E,
                         ),
                       ),
                     ),
                     verticalSpace(18),
                     CustomDoctorItem(
-                      doctorModel: context
-                          .read<DoctorCubit>()
-                          .listOfDoctors[index],
+                      doctorModel:
+                          context.read<DoctorCubit>().listOfDoctors[index],
                     )
                   ],
                 ),
               );
             },
-            itemCount:
-                context.read<DoctorCubit>().listOfDoctors.length,
+            itemCount: context.read<DoctorCubit>().listOfDoctors.length,
           ),
         ),
       ],

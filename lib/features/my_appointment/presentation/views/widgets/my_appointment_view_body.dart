@@ -2,10 +2,7 @@ import 'package:doc_doc_app/core/utils/color.dart';
 import 'package:doc_doc_app/core/utils/font_weight_helper.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:doc_doc_app/core/utils/styles.dart';
-import 'package:doc_doc_app/core/widgets/custom_app_bar_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'my_appointment_completed_widget.dart';
 import 'myappointment_upcoming_widget.dart';
@@ -45,7 +42,14 @@ class _MyAppointmentViewBodyState extends State<MyAppointmentViewBody>
       ),
       child: Column(
         children: [
-          const CustomAppBarWidget(text: 'My Appointment'),
+          Center(
+            child: Text(
+              'My Appointment',
+              style: Styles.font18Bold.copyWith(
+                fontWeight: FontWeightHelper.semiBold,
+              ),
+            ),
+          ),
           verticalSpace(34),
           SizedBox(
             height: 44.h,
@@ -60,7 +64,7 @@ class _MyAppointmentViewBodyState extends State<MyAppointmentViewBody>
                       bottom: BorderSide(
                         color: currentPageIndex == index
                             ? ColorManager.mainBlue
-                            : ColorManager.lightGray,
+                            : ColorManager.grayC2,
                         width: 2,
                       ),
                     ),
@@ -74,7 +78,7 @@ class _MyAppointmentViewBodyState extends State<MyAppointmentViewBody>
                         fontWeight: FontWeightHelper.bold,
                         color: currentPageIndex == index
                             ? ColorManager.mainBlue
-                            : ColorManager.greyOpacity,
+                            : ColorManager.grey9E,
                       ),
                     ),
                   ),

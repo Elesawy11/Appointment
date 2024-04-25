@@ -13,36 +13,38 @@ class MessagesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: Text(
-                'Message',
-                textAlign: TextAlign.center,
-                style: Styles.font18Bold.copyWith(
-                  fontWeight: FontWeightHelper.semiBold,
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Message',
+                  textAlign: TextAlign.center,
+                  style: Styles.font18Bold.copyWith(
+                    fontWeight: FontWeightHelper.semiBold,
+                  ),
                 ),
               ),
-            ),
-            const CustomCreateNewMessageWidget(),
-          ],
-        ),
-        verticalSpace(36),
-        const CustomAppTextAndIcon(),
-        verticalSpace(24),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.677,
-          child: ListView.builder(
-            padding: EdgeInsets.zero,
-            itemCount: 6,
-            itemBuilder: (context, index) {
-              return const CustomMessageWidget();
-            },
+              const CustomCreateNewMessageWidget(),
+            ],
           ),
-        ),
-      ],
+          verticalSpace(36),
+          const CustomAppTextAndIcon(),
+          verticalSpace(24),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.677,
+            child: ListView.builder(
+              padding: EdgeInsets.zero,
+              itemCount: 6,
+              itemBuilder: (context, index) {
+                return const CustomMessageWidget();
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

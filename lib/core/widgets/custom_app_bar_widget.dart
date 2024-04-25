@@ -10,10 +10,11 @@ class CustomAppBarWidget extends StatelessWidget {
   const CustomAppBarWidget({
     super.key,
     required this.text,
-    this.icon,
+    this.icon, this.color,
   });
   final String text;
   final IconData? icon;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,7 +23,7 @@ class CustomAppBarWidget extends StatelessWidget {
           width: 44.w,
           height: 44.h,
           decoration: BoxDecoration(
-            border: Border.all(color: ColorManager.lightWhite),
+            border: Border.all(color: ColorManager.grayED),
             borderRadius: BorderRadius.circular(10.r),
           ),
           child: IconButton(
@@ -39,6 +40,7 @@ class CustomAppBarWidget extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Styles.font18Bold.copyWith(
               fontWeight: FontWeightHelper.semiBold,
+              color: color?? ColorManager.darkBlue
             ),
           ),
         )

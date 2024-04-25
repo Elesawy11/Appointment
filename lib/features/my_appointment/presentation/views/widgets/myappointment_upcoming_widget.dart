@@ -30,7 +30,7 @@ class MyAppointmentUpcomingWidget extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.85,
                 child: const Divider(
                   thickness: 0.2,
-                  color: ColorManager.greyOpacity,
+                  color: ColorManager.grey9E,
                 ),
               ),
               Row(

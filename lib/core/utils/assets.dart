@@ -16,6 +16,20 @@ abstract class Assets {
   static const String videoCall = 'assets/svg_image/video_call.svg';
   static const String record = 'assets/svg_image/record.svg';
   static const String sendMessage = 'assets/svg_image/send_message.svg';
+  static const String setting = 'assets/svg_image/setting.svg';
+  static const String personalInfo = 'assets/svg_image/personal_info.svg';
+  static const String test = 'assets/svg_image/test.svg';
+  static const String payment = 'assets/svg_image/payment.svg';
+  static const String editProfile = 'assets/svg_image/edit_profile.svg';
+  static const String notification = 'assets/svg_image/notification.svg';
+  static const String fAQ = 'assets/svg_image/faq.svg';
+  static const String security = 'assets/svg_image/security.svg';
+  static const String language = 'assets/svg_image/language.svg';
+  static const String logout = 'assets/svg_image/logout.svg';
+  static const String paypal = 'assets/svg_image/paypal.svg';
+  static const String applepay = 'assets/svg_image/applepay.svg';
+  static const String dana = 'assets/svg_image/dana.svg';
+  static const String payoneer = 'assets/svg_image/payoneer.svg';
 
   static const String doctor =
       'https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*';
@@ -43,4 +57,5 @@ abstract class Assets {
   static const String video = 'assets/image/video.png';
   static const String inperson = 'assets/image/inperson.png';
   static const String call = 'assets/image/call.png';
+  static const String profile = 'assets/image/profile.png';
 }

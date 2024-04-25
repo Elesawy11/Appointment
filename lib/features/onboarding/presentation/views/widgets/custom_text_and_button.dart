@@ -19,7 +19,7 @@ class CustomTextAndTextButton extends StatelessWidget {
           Text(
             'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
             style: Styles.font12Regular.copyWith(
-              color: ColorManager.grey,
+              color: ColorManager.grey75,
             ),
             textAlign: TextAlign.center,
           ),

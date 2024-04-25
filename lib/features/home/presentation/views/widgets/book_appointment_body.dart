@@ -69,7 +69,7 @@ class _BookAppointmentBodyState extends State<BookAppointmentBody>
                       ? ColorManager.mainBlue
                       : currentPageIndex > index
                           ? ColorManager.green
-                          : ColorManager.grey,
+                          : ColorManager.grey75,
                 );
               },
             ),

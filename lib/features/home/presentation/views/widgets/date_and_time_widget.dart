@@ -66,7 +66,7 @@ class _DateAndTimeWidgetState extends State<DateAndTimeWidget> {
                         borderRadius: BorderRadius.circular(12.r),
                         color: currentDate == index
                             ? ColorManager.mainBlue
-                            : ColorManager.lighterGray,
+                            : ColorManager.grayED,
                       ),
                       child: Center(
                         child: Column(
@@ -78,7 +78,7 @@ class _DateAndTimeWidgetState extends State<DateAndTimeWidget> {
                                 fontWeight: FontWeightHelper.medium,
                                 color: currentDate == index
                                     ? Colors.white
-                                    : ColorManager.lightGray,
+                                    : ColorManager.grayC2,
                               ),
                             ),
                             Text(
@@ -87,7 +87,7 @@ class _DateAndTimeWidgetState extends State<DateAndTimeWidget> {
                                 fontWeight: FontWeightHelper.medium,
                                 color: currentDate == index
                                     ? Colors.white
-                                    : ColorManager.lightGray,
+                                    : ColorManager.grayC2,
                               ),
                             ),
                           ],
@@ -126,14 +126,14 @@ class _DateAndTimeWidgetState extends State<DateAndTimeWidget> {
                       borderRadius: BorderRadius.circular(14.r),
                       color: currentTime == index
                           ? ColorManager.mainBlue
-                          : ColorManager.lighterGray,
+                          : ColorManager.grayED,
                     ),
                     child: Center(
                       child: Text(
                         '08.00 AM',
                         style: Styles.font14Regular.copyWith(
                           fontWeight: FontWeightHelper.medium,
-                          color: ColorManager.lightGray,
+                          color: ColorManager.grayC2,
                         ),
                       ),
                     ),
@@ -155,7 +155,7 @@ class _DateAndTimeWidgetState extends State<DateAndTimeWidget> {
                   decoration: const BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
-                        color: ColorManager.lighterGray,
+                        color: ColorManager.grayED,
                       ),
                     ),
                   ),

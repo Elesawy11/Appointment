@@ -20,7 +20,7 @@ class WelcomeSignUpWidget extends StatelessWidget {
         verticalSpace(8),
         Text(
           'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
-          style: Styles.font14Regular.copyWith(color: ColorManager.grey),
+          style: Styles.font14Regular.copyWith(color: ColorManager.grey75),
         )
       ],
     );

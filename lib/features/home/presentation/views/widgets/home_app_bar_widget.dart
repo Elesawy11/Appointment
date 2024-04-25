@@ -27,15 +27,14 @@ class HomeAppBarWidget extends StatelessWidget {
             ),
             Text(
               'How Are you Today?',
-              style:
-                  Styles.font12Regular.copyWith(color: ColorManager.hardGrey),
+              style: Styles.font12Regular.copyWith(color: ColorManager.grey61),
             ),
           ],
         ),
         Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.r),
-              color: ColorManager.whiteOpacity),
+              color: ColorManager.whiteF5),
           child: IconButton(
             onPressed: () => context.push(Routes.notificationView),
             icon: const Icon(
