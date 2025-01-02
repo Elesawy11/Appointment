@@ -1,7 +1,6 @@
+import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/spacer.dart';
 import '../../../../../core/utils/styles.dart';
@@ -18,6 +17,7 @@ class MyAppointmentCompletedWidget extends StatelessWidget {
   final Color? color;
   @override
   Widget build(BuildContext context) {
+    final cubit = getIt.get<DoctorCubit>();
     return Column(
       children: [
         SizedBox(
@@ -58,14 +58,13 @@ class MyAppointmentCompletedWidget extends StatelessWidget {
                     ),
                     verticalSpace(18),
                     CustomDoctorItem(
-                      doctorModel:
-                          context.read<DoctorCubit>().listOfDoctors[index],
+                      doctorModel: cubit.listOfDoctors[index],
                     )
                   ],
                 ),
               );
             },
-            itemCount: context.read<DoctorCubit>().listOfDoctors.length,
+            itemCount: cubit.listOfDoctors.length,
           ),
         ),
       ],
