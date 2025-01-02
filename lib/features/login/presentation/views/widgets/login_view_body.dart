@@ -3,7 +3,6 @@ import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:doc_doc_app/core/utils/spacer.dart';
 import 'package:doc_doc_app/core/utils/styles.dart';
 import 'package:doc_doc_app/features/login/data/models/login_request.dart';
-import 'package:doc_doc_app/features/login/data/repo/login_repo.dart';
 import 'package:doc_doc_app/features/login/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:doc_doc_app/features/login/presentation/views/widgets/divider_and_text.dart';
 import 'package:doc_doc_app/core/widgets/app_text_button.dart';
@@ -21,9 +20,9 @@ class LoginViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoginCubit(getIt.get<LoginRepo>()),
+      create: (context) => getIt.get<LoginCubit>(),
       child: Builder(builder: (context) {
-        LoginCubit cubit = BlocProvider.of<LoginCubit>(context);
+        LoginCubit cubit = getIt.get<LoginCubit>();
         return SingleChildScrollView(
           child: Column(
             children: [
@@ -44,18 +43,18 @@ class LoginViewBody extends StatelessWidget {
                 text: 'Login',
                 onPressed: () {
                   // context.push(Routes.homeView);
-                  if (context
-                      .read<LoginCubit>()
+                  if (getIt
+                      .get<LoginCubit>()
                       .formKey
                       .currentState!
                       .validate()) {
-                    BlocProvider.of<LoginCubit>(context).loginMethod(
-                      LoginRequestBody(
-                        email: context.read<LoginCubit>().emailController.text,
-                        password:
-                            context.read<LoginCubit>().passwordController.text,
-                      ),
-                    );
+                    getIt.get<LoginCubit>().loginMethod(
+                          LoginRequestBody(
+                            email: getIt.get<LoginCubit>().emailController.text,
+                            password:
+                                getIt.get<LoginCubit>().passwordController.text,
+                          ),
+                        );
                   }
                 },
               ),

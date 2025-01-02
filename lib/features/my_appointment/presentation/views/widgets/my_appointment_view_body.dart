@@ -36,79 +36,81 @@ class _MyAppointmentViewBodyState extends State<MyAppointmentViewBody>
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 24.w,
-      ),
-      child: Column(
-        children: [
-          Center(
-            child: Text(
-              'My Appointment',
-              style: Styles.font18Bold.copyWith(
-                fontWeight: FontWeightHelper.semiBold,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 24.w,
+        ),
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                'My Appointment',
+                style: Styles.font18Bold.copyWith(
+                  fontWeight: FontWeightHelper.semiBold,
+                ),
               ),
             ),
-          ),
-          verticalSpace(34),
-          SizedBox(
-            height: 44.h,
-            child: ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: texts.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: currentPageIndex == index
-                            ? ColorManager.mainBlue
-                            : ColorManager.grayC2,
-                        width: 2,
+            verticalSpace(34),
+            SizedBox(
+              height: 44.h,
+              child: ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: texts.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          color: currentPageIndex == index
+                              ? ColorManager.mainBlue
+                              : ColorManager.grayC2,
+                          width: 2,
+                        ),
                       ),
                     ),
-                  ),
-                  width: 110.w,
-                  height: 44.h,
-                  child: Center(
-                    child: Text(
-                      texts[index],
-                      style: Styles.font14Regular.copyWith(
-                        fontWeight: FontWeightHelper.bold,
-                        color: currentPageIndex == index
-                            ? ColorManager.mainBlue
-                            : ColorManager.grey9E,
+                    width: 110.w,
+                    height: 44.h,
+                    child: Center(
+                      child: Text(
+                        texts[index],
+                        style: Styles.font14Regular.copyWith(
+                          fontWeight: FontWeightHelper.bold,
+                          color: currentPageIndex == index
+                              ? ColorManager.mainBlue
+                              : ColorManager.grey9E,
+                        ),
                       ),
                     ),
+                  );
+                },
+              ),
+            ),
+            verticalSpace(32),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.7,
+              child: PageView(
+                scrollDirection: Axis.horizontal,
+                onPageChanged: (value) {
+                  currentPageIndex = value;
+                  setState(() {});
+                },
+                controller: pageViewController,
+                children: const [
+                  MyAppointmentUpcomingWidget(),
+                  MyAppointmentCompletedWidget(
+                    mainText: 'Appointment done',
                   ),
-                );
-              },
+                  MyAppointmentCompletedWidget(
+                    mainText: 'Appointment cancelled',
+                    color: Colors.red,
+                  ),
+                ],
+              ),
             ),
-          ),
-          verticalSpace(32),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.7,
-            child: PageView(
-              scrollDirection: Axis.horizontal,
-              onPageChanged: (value) {
-                currentPageIndex = value;
-                setState(() {});
-              },
-              controller: pageViewController,
-              children: const [
-                MyAppointmentUpcomingWidget(),
-                MyAppointmentCompletedWidget(
-                  mainText: 'Appointment done',
-                ),
-                MyAppointmentCompletedWidget(
-                  mainText: 'Appointment cancelled',
-                  color: Colors.red,
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -1,7 +1,6 @@
+import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/font_weight_helper.dart';
 import '../../../../../core/utils/spacer.dart';
@@ -16,15 +15,16 @@ class MyAppointmentUpcomingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = getIt.get<DoctorCubit>();
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.8,
       child: ListView.builder(
-        itemCount: context.read<DoctorCubit>().listOfDoctors.length,
+        itemCount: cubit.listOfDoctors.length,
         itemBuilder: (context, index) {
           return Column(
             children: [
               CustomDoctorItem(
-                doctorModel: context.read<DoctorCubit>().listOfDoctors[index],
+                doctorModel: cubit.listOfDoctors[index],
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.85,

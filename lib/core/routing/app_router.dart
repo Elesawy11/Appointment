@@ -61,8 +61,7 @@ abstract class AppRouter {
               GoRoute(
                 path: Routes.homeView,
                 builder: (context, state) => BlocProvider(
-                  create: (context) =>
-                      DoctorCubit(getIt.get<HomeRepo>())..getAllDoctor(),
+                  create: (context) => getIt.get<DoctorCubit>(),
                   child: const HomeView(),
                 ),
               ),
@@ -139,9 +138,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: Routes.recommendationView,
-        builder: (context, state) => RecommendationView(
-          doctorList: state.extra as List<DoctorModel>,
-        ),
+        builder: (context, state) => const RecommendationView(),
         routes: [
           GoRoute(
             path: Routes.doctorDetailsView,
