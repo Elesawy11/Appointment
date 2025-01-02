@@ -1,6 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:doc_doc_app/core/utils/api_keys.dart';
-import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:doc_doc_app/features/login/data/models/login_request.dart';
 import 'package:doc_doc_app/features/login/data/models/login_response.dart';
 import 'package:doc_doc_app/features/login/data/repo/login_repo.dart';
@@ -26,9 +24,7 @@ class LoginCubit extends Cubit<LoginState> {
         (failure) => emit(
             LoginFailure(failure.apiErrorModel.message ?? 'unKnowen error')),
         (responseBody) async {
-      getIt.get<ApiKeys>().token = responseBody.userData!.token;
-
-      // pref.setBool('isLogin', true);
+      pref.setBool('isLogin', true);
       emit(
         LoginSuccess(
           responseBody,

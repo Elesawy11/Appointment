@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:doc_doc_app/core/networking/api_service.dart';
 import 'package:doc_doc_app/core/networking/dio_factory.dart';
-import 'package:doc_doc_app/core/utils/api_keys.dart';
 import 'package:doc_doc_app/features/home/data/repo/home_repo.dart';
 import 'package:doc_doc_app/features/home/presentation/manager/doctor_cubit/doctor_cubit.dart';
 import 'package:doc_doc_app/features/login/data/repo/login_repo.dart';
@@ -19,7 +18,7 @@ void setupServiceLocator() {
     ),
   );
 
-  getIt.registerLazySingleton<LoginRepo>(
+getIt.registerLazySingleton<LoginRepo>(
     () => LoginRepo(
       getIt.get<ApiService>(),
     ),
@@ -34,6 +33,7 @@ void setupServiceLocator() {
       getIt.get<ApiService>(),
     ),
   );
+
   getIt.registerLazySingleton<LoginCubit>(
     () => LoginCubit(
       getIt.get<LoginRepo>(),
@@ -48,4 +48,5 @@ void setupServiceLocator() {
       getIt.get<HomeRepo>(),
     )..getAllDoctor(),
   );
+
 }
