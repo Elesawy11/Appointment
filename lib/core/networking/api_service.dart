@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:doc_doc_app/core/utils/api_keys.dart';
-import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:doc_doc_app/features/login/data/models/login_request.dart';
 import 'package:doc_doc_app/features/signup/data/models/sign_up_request_model.dart';
 import 'api_constants.dart';
@@ -39,7 +38,8 @@ class ApiService {
   Future<Map<String, dynamic>> getAllDoctor() async {
     var headers = {
       'Accept': 'application/json',
-      'Authorization': 'Bearer ${getIt.get<ApiKeys>().token}',
+      'Authorization':
+          'Bearer ${ApiKeys.token}'
     };
     var response = await dio.get(
         '${ApiConstants.apiBaseUrl}${ApiConstants.getAllDoctor}',
@@ -47,3 +47,5 @@ class ApiService {
     return response.data;
   }
 }
+
+
