@@ -60,11 +60,7 @@ abstract class AppRouter {
             routes: [
               GoRoute(
                 path: Routes.homeView,
-                builder: (context, state) => BlocProvider(
-                  create: (context) =>
-                      DoctorCubit(getIt.get<HomeRepo>())..getAllDoctor(),
-                  child: const HomeView(),
-                ),
+                builder: (context, state) => const HomeView(),
               ),
             ],
           ),
