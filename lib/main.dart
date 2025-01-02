@@ -6,6 +6,7 @@ import 'doc_doc_body.dart';
 
 void main() {
   setupServiceLocator();
+  print(setupServiceLocator.runtimeType);
   Bloc.observer = SimpleBlocObserver();
   runApp(
     const DocDocApp(),

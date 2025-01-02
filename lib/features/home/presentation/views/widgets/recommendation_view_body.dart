@@ -1,18 +1,22 @@
+import 'package:doc_doc_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/utils/spacer.dart';
 import '../../../../../core/widgets/custom_app_bar_widget.dart';
-import '../../../data/models/doctor_model.dart';
+import '../../manager/doctor_cubit/doctor_cubit.dart';
 import 'custom_doctor_item.dart';
 import 'recommendation_app_text_and_icon.dart';
 
 class RecommendationViewBody extends StatelessWidget {
-  const RecommendationViewBody({super.key, required this.doctorList});
-  final List<DoctorModel> doctorList;
+  const RecommendationViewBody({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
+    final cubit = getIt.get<DoctorCubit>();
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Column(
@@ -30,14 +34,14 @@ class RecommendationViewBody extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 padding: EdgeInsets.zero,
                 physics: const BouncingScrollPhysics(),
-                itemCount: doctorList.length,
+                itemCount: cubit.listOfDoctors.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () => context.push(
                         '${Routes.recommendationView}/${Routes.doctorDetailsView}',
-                        extra: doctorList[index]),
+                        extra: cubit.listOfDoctors[index]),
                     child: CustomDoctorItem(
-                      doctorModel: doctorList[index],
+                      doctorModel: cubit.listOfDoctors[index],
                     ),
                   );
                 }),

@@ -43,5 +43,9 @@ void setupServiceLocator() {
     ApiKeys(),
   );
 
-  getIt.registerSingleton<DoctorCubit>(DoctorCubit(getIt.get<HomeRepo>()));
+  getIt.registerLazySingleton<DoctorCubit>(
+    () => DoctorCubit(
+      getIt.get<HomeRepo>(),
+    )..getAllDoctor(),
+  );
 }
