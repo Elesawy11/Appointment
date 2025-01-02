@@ -1,28 +1,16 @@
-#👨‍⚕️ Welcome to the DocDoc App repository! 🩺
-Are you looking for an application that provides you easy access to the best doctors in all specialties? Or do you communicate with your treating doctor with ease and also provide different payment methods?! Then DocDoc App is the solution
+# doc_doc_app
 
-#Overview:
-🚀 Built with Dart & Flutter Framework for seamless performance and stunning UI.
+A new Flutter project.
 
-🎨 Crafted with meticulous attention to detail, ensuring an intuitive and visually appealing user experience.
+## Getting Started
 
-✨ Leveraging packages like fancy shimmer effect, image, and provider for enhanced functionality.
+This project is a starting point for a Flutter application.
 
-🧼 Emphasizing clean, readable code for easy maintenance and scalability.
+A few resources to get you started if this is your first Flutter project:
 
-# 🎨 UI
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-## Splash Screen
-![splash](https://github.com/Elesawy11/Appointment/assets/91203838/556cf44c-0542-40c5-a58b-4d02892e7eda)
-
-## Onboarding Screen
-![Screenshot_1713315491](https://github.com/Elesawy11/Appointment/assets/91203838/d8730d12-1621-4acd-8e84-1721cb0c657b)
-
-## Login Screen
-![Screenshot_1713315541](https://github.com/Elesawy11/Appointment/assets/91203838/bb1aa407-647e-4a63-8dbd-9346342ce152)
-
-## Home Screen
-![Homepage](https://github.com/Elesawy11/Appointment/assets/91203838/25b509cf-f72b-418c-93a6-301635bee98f)
-
-# Finaly App Video Link:
-[LinkedIn Video](https://www.linkedin.com/posts/ahmed-elesawy-181014228_flutter-activity-7189355839046991872-BDhQ?utm_source=share&utm_medium=member_desktop)-App Video
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
